@@ -56,6 +56,17 @@ body {
   margin: 20px 0px;
   text-align: center;
 }
+#introduction > img {
+  animation-name: profiles;
+  animation-duration: 20s;
+}
+@keyframes profiles {
+  0% {img src="images/emily_b.png" alt="profile pic"}
+  25% {img src="images/profile_tea" alt="profile pic"}
+  50% {img src="images/profile_t" alt="profile pic"}
+  75% {img src="images/drawing" alt="profile pic"}
+  100% {img src="images/Baird.jpg" alt="profile pic"}
+}
 .btn {
   background-color: #D6B7B5;
   color: white;
