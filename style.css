@@ -58,15 +58,20 @@ body {
 }
 .profile-pic {
   /* display: none; */
-  -webkit-animation: MoveAround 5s linear infinite;
+  -webkit-animation: MoveAround 20s linear infinite;
 }
 @-webkit-keyframes MoveAround {
   from {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
   to {
-    transform: translateX(50%);
+    transform: translateX(40%);
   }
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between; /* Distributes buttons evenly with space between */
+  gap: 20px; /* Optional: additional spacing between buttons */
 }
 .btn {
   background-color: #D6B7B5;
@@ -96,8 +101,11 @@ body {
   padding-inline-start: 40px;
 }
 .container {
-  width: 500px;   /* This sets the width */
-  margin: 0 auto; /* This automatically sets left/right margins */
+  /* width: 500px;   /* This sets the width */
+  /* margin: 0 auto; This automatically sets left/right margins */ 
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 for the left side, 2/3 for the right side */
+  gap: 20px; /* Space between the grid columns */
 }
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
@@ -118,4 +126,11 @@ body {
   .container {
     width: 300px;
   }
+}
+.left-column {
+  /* This will be the left third of the page */
+}
+
+.right-column {
+  /* This will be the right two-thirds of the page */
 }
