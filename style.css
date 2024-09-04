@@ -4,6 +4,36 @@ body {
   font-family: 'Lora', serif;
   font-size: 17px;
   font-weight: lighter;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.left-container {
+  width: 400px; /* Adjust the width as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto; /* Allows vertical scrolling */
+  padding: 20px; /* Optional: adds padding to the left column */
+  background-color: #F5F0ED; /* Same background color as body to avoid color issues */
+  z-index: 1; /* Ensure it stays above other content */
+}
+
+.right-container {
+  margin-left: 400px; /* Space for the fixed left container */
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto; /* Allows vertical scrolling */
+  height: 100vh; /* Full viewport height */
+  background-color: #F5F0ED; /* Background color to match body */
 }
 
 h1 {
@@ -12,6 +42,7 @@ h1 {
   font-size: 40px;
   line-height: 1.5;
   letter-spacing: 3px;
+  margin: 0 40px; /* Margin adjustment */
 }
 
 h3 {
@@ -26,7 +57,6 @@ p {
   font-family: 'Lora', serif;
   color: #3d5361;
   font-size: 14px;
-  /* line-height: 1.5; */
   /* margin: 0 40px 40px 40px; */
 }
 
@@ -38,12 +68,6 @@ ul {
 
 ul li {
   margin-bottom: 10px; /* Space between items */
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* 1/3 for the left side, 2/3 for the right side */
-  gap: 20px; /* Space between the grid columns */
 }
 
 .card-white {
@@ -77,7 +101,7 @@ ul li {
 .btn {
   background-color: #D6B7B5;
   color: white;
-  padding: 15px 20px;
+  padding: 10px 15px;
   border-radius: 10px;
 }
 
@@ -109,28 +133,38 @@ ul li {
 
 .experience ul {
   list-style-type: disc; /* Bullets for experience list */
-  padding-left: 40px; /* Space for bullets */
-  margin: 0; /* Reset margin */
+  /* padding-left: 40px; /* Space for bullets */
+  /* margin: 0; Reset margin  */
 }
 
-.experience ul li {
+/* .experience ul li {
   margin-bottom: 10px; /* Space between items */
-}
+/* } */ 
 
 @media (max-width: 960px) {
   .container {
-      width: 700px;
+      flex-direction: column;
+  }
+
+  .left-container {
+      position: static; /* Remove fixed positioning */
+      width: 100%;
+      margin-bottom: 20px; /* Space below left container */
+  }
+
+  .right-container {
+      margin-left: 0;
   }
 }
 
 @media (max-width: 720px) {
   .container {
-      width: 500px;
+      width: 100%;
   }
 }
 
 @media (max-width: 540px) {
   .container {
-      width: 300px;
+      width: 100%;
   }
 }
