@@ -126,13 +126,26 @@ ul li {
   font-size: 18px; /* Size of social icons */
   text-decoration: none; /* No underline */
 }
+.about {
+  padding: 0 40px 80px; /* Padding around about section */
+}
 
 .experience {
-  padding: 0 40px; /* Padding around experience section */
+  padding: 0 40px 80px; /* Padding around projects section */
+}
+
+.projects {
+  padding: 0 40px 80px; /* Padding around projects section */
 }
 
 .experience ul {
-  list-style-type: disc; /* Bullets for experience list */
+  list-style-type: disc; /* Bullets for projects list */
+  /* padding-left: 40px; /* Space for bullets */
+  /* margin: 0; Reset margin  */
+}
+
+.projects ul {
+  list-style-type: disc; /* Bullets for projects list */
   /* padding-left: 40px; /* Space for bullets */
   /* margin: 0; Reset margin  */
 }
