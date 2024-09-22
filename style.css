@@ -60,6 +60,29 @@ p {
   /* margin: 0 40px 40px 40px; */
 }
 
+#project-links {
+  font-family: Sacramento, serif;
+  color: #3d5361;
+  position: relative;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+#project-links::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  bottom: -2px; /* Position of the underline below the text */
+  left: 0;
+  background-color: black; /* Color of the underline */
+  transition: width 0.3s ease; /* Transition effect */
+}
+
+#project-links:hover::after {
+  width: 100%; /* Expands the underline to full width on hover */
+}
+
 ul {
   list-style-type: disc; /* Apply bullets to ul elements */
   padding-left: 40px; /* Space for bullets */
