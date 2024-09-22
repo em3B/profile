@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  cursor: url('images/mouse2.png'), auto;
 }
 
 .container {
@@ -27,14 +28,33 @@ body {
   z-index: 1; /* Ensure it stays above other content */
 }
 
+/* Hiding scrollbars for the left container */
+.left-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Edge, and Safari */
+}
+
+.left-container {
+  scrollbar-width: none; /* For Firefox */
+}
+
 .right-container {
   margin-left: 400px; /* Space for the fixed left container */
   padding: 20px;
   flex: 1;
-  overflow-y: auto; /* Allows vertical scrolling */
   height: 100vh; /* Full viewport height */
   background-color: #F5F0ED; /* Background color to match body */
+  overflow-y: auto; /* Allows vertical scrolling */
 }
+
+/* Hiding scrollbars for the right container */
+.right-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Edge, and Safari */
+}
+
+.right-container {
+  scrollbar-width: none; /* For Firefox */
+}
+
 
 h1 {
   font-family: Sacramento, serif;
@@ -66,6 +86,7 @@ p {
   position: relative;
   font-size: 26px;
   text-decoration: none;
+  cursor: url('images/mouse2.png'), auto;
 }
 
 #project-links::after {
@@ -123,14 +144,22 @@ ul li {
 
 .btn {
   background-color: #D6B7B5;
+  font-family: 'Lora', serif;
+  font-size: 14px;
   color: white;
   padding: 10px 15px;
   border-radius: 10px;
+  cursor: url('images/mouse2.png'), auto;
 }
 
 .btn:hover {
   background-color: #F2E2DF;
   text-decoration: none;
+}
+
+.btn:active {
+  background-color: antiquewhite;
+  color: #575F7D;
 }
 
 .social-list {
